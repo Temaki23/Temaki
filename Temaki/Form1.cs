@@ -88,5 +88,38 @@ namespace CadastroClientes
         {
             button1.Visible = true;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewClientes.SelectedRows.Count > 0)
+            {
+                
+                int id = Convert.ToInt32(dataGridViewClientes.SelectedRows[0].Cells["Id"].Value);
+
+               
+                DialogResult result = MessageBox.Show("Deseja realmente excluir este registro?", "Confirmação", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                   
+                    using (SqlConnection conn = new SqlConnection("Data Source=sqlexpress;Initial Catalog=CJ3028224PR2;User ID=aluno;Password=aluno"))
+                    {
+                        conn.Open();
+                        string query = "DELETE FROM Clientes WHERE Id = @Id";
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@Id", id);
+                        cmd.ExecuteNonQuery();
+                    }
+
+            
+                    dataGridViewClientes.Rows.RemoveAt(dataGridViewClientes.SelectedRows[0].Index);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma linha para excluir.");
+            }
+        }
+
+        }
     }
-}
+    
