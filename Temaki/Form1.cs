@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Temaki;
 
 namespace CadastroClientes
 {
@@ -13,6 +14,7 @@ namespace CadastroClientes
         public Form1()
         {
             InitializeComponent();
+            btnEntrar.Visible = false; 
             CarregarClientes();
         }
 
@@ -31,7 +33,7 @@ namespace CadastroClientes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar clientes: " + ex.Message);
+                MessageBox.Show("Erro ao entrar: " + ex.Message);
             }
         }
 
@@ -72,7 +74,7 @@ namespace CadastroClientes
                     cmd.ExecuteNonQuery();
                     con.Close();
 
-                    MessageBox.Show("Cliente salvo com sucesso!");
+                    MessageBox.Show("Advogado salvo com sucesso!");
 
                     LimparCampos();
                     CarregarClientes();
@@ -80,13 +82,13 @@ namespace CadastroClientes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao salvar cliente: " + ex.Message);
+                MessageBox.Show("Erro ao salvar Advogado: " + ex.Message);
             }
         }
 
         private void dataGridViewClientes_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            button1.Visible = true;
+            btnExcluir.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -120,6 +122,57 @@ namespace CadastroClientes
             }
         }
 
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            btnEntrar.Visible = false;
+        
+        
+            Form2 form2 = new Form2();   
+            form2.Show();                
+        }
+
+
+
+        private void dataGridViewClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+                if (e.RowIndex >= 0) 
+                {
+                    btnEntrar.Visible = true;
+                }
+            }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string sql = "SELECT COUNT(*) FROM ClientesDoAdvogado";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                conn.Open();
+
+                int count = (int)cmd.ExecuteScalar();
+
+                if (count > 0)
+                {
+                    btnEntrar.Visible = true;
+                }
+                else
+                {
+                    btnEntrar.Visible = false; 
+                }
+            }
+        }
+
+        private void dataGridViewClientes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            {
+                if (e.RowIndex >= 0)
+                {
+                    MessageBox.Show("DoubleClick detectado!");
+                    btnEntrar.Visible = true;
+                }
+            }
         }
     }
+}
+    
     

@@ -28,138 +28,115 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNome = new System.Windows.Forms.Label();
-            this.lblCpf = new System.Windows.Forms.Label();
-            this.lblEnd = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblTel = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtCPF = new System.Windows.Forms.TextBox();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.txtCPF = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.btnEntrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(70, 106);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(35, 13);
-            this.lblNome.TabIndex = 0;
-            this.lblNome.Text = "Nome";
-            // 
-            // lblCpf
-            // 
-            this.lblCpf.AutoSize = true;
-            this.lblCpf.Location = new System.Drawing.Point(46, 150);
-            this.lblCpf.Name = "lblCpf";
-            this.lblCpf.Size = new System.Drawing.Size(59, 13);
-            this.lblCpf.TabIndex = 1;
-            this.lblCpf.Text = "CPF/CNPJ";
-            // 
-            // lblEnd
-            // 
-            this.lblEnd.AutoSize = true;
-            this.lblEnd.Location = new System.Drawing.Point(52, 193);
-            this.lblEnd.Name = "lblEnd";
-            this.lblEnd.Size = new System.Drawing.Size(53, 13);
-            this.lblEnd.TabIndex = 2;
-            this.lblEnd.Text = "Endereço";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(73, 235);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(32, 13);
-            this.lblEmail.TabIndex = 3;
-            this.lblEmail.Text = "Email";
-            // 
-            // lblTel
-            // 
-            this.lblTel.AutoSize = true;
-            this.lblTel.Location = new System.Drawing.Point(56, 281);
-            this.lblTel.Name = "lblTel";
-            this.lblTel.Size = new System.Drawing.Size(49, 13);
-            this.lblTel.TabIndex = 4;
-            this.lblTel.Text = "Telefone";
-            // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(146, 106);
+            this.txtNome.Location = new System.Drawing.Point(51, 106);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 20);
+            this.txtNome.Size = new System.Drawing.Size(229, 20);
             this.txtNome.TabIndex = 5;
-            // 
-            // txtCPF
-            // 
-            this.txtCPF.Location = new System.Drawing.Point(146, 150);
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(100, 20);
-            this.txtCPF.TabIndex = 6;
-            // 
-            // txtEndereco
-            // 
-            this.txtEndereco.Location = new System.Drawing.Point(146, 193);
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(100, 20);
-            this.txtEndereco.TabIndex = 7;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(146, 235);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 20);
-            this.txtEmail.TabIndex = 8;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(146, 281);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefone.TabIndex = 9;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(451, 315);
+            this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalvar.BackgroundImage = global::Temaki.Properties.Resources._3456;
+            this.btnSalvar.Location = new System.Drawing.Point(542, 282);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(200, 60);
+            this.btnSalvar.Size = new System.Drawing.Size(150, 41);
             this.btnSalvar.TabIndex = 10;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
             // 
             // dataGridViewClientes
             // 
+            this.dataGridViewClientes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewClientes.Location = new System.Drawing.Point(414, 106);
+            this.dataGridViewClientes.Location = new System.Drawing.Point(499, 96);
             this.dataGridViewClientes.Name = "dataGridViewClientes";
-            this.dataGridViewClientes.Size = new System.Drawing.Size(265, 188);
+            this.dataGridViewClientes.Size = new System.Drawing.Size(256, 159);
             this.dataGridViewClientes.TabIndex = 11;
+            this.dataGridViewClientes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClientes_CellContentDoubleClick);
             this.dataGridViewClientes.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewClientes_MouseDoubleClick);
             // 
-            // button1
+            // btnExcluir
             // 
-            this.button1.Location = new System.Drawing.Point(479, 381);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 45);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Excluir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
+            this.btnExcluir.BackgroundImage = global::Temaki.Properties.Resources.Captura_de_tela_2025_09_;
+            this.btnExcluir.Location = new System.Drawing.Point(542, 376);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(150, 41);
+            this.btnExcluir.TabIndex = 12;
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Visible = false;
+            this.btnExcluir.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtCPF
+            // 
+            this.txtCPF.Location = new System.Drawing.Point(51, 165);
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(229, 20);
+            this.txtCPF.TabIndex = 6;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(51, 282);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(229, 20);
+            this.txtTelefone.TabIndex = 9;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(51, 225);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(229, 20);
+            this.txtEmail.TabIndex = 8;
+            // 
+            // txtEndereco
+            // 
+            this.txtEndereco.Location = new System.Drawing.Point(51, 340);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(229, 20);
+            this.txtEndereco.TabIndex = 7;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(12, 106);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(0, 13);
+            this.lblNome.TabIndex = 0;
+            // 
+            // btnEntrar
+            // 
+            this.btnEntrar.BackgroundImage = global::Temaki.Properties.Resources.zxcvbnm_;
+            this.btnEntrar.Location = new System.Drawing.Point(542, 329);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(150, 41);
+            this.btnEntrar.TabIndex = 13;
+            this.btnEntrar.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackgroundImage = global::Temaki.Properties.Resources.asdasdasdasd;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEntrar);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.dataGridViewClientes);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtTelefone);
@@ -167,12 +144,9 @@
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.lblTel);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.lblEnd);
-            this.Controls.Add(this.lblCpf);
             this.Controls.Add(this.lblNome);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).EndInit();
             this.ResumeLayout(false);
@@ -181,20 +155,16 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.Label lblCpf;
-        private System.Windows.Forms.Label lblEnd;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblTel;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtCPF;
-        private System.Windows.Forms.TextBox txtEndereco;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.DataGridView dataGridViewClientes;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.TextBox txtCPF;
+        private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Button btnEntrar;
     }
 }
 
